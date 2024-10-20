@@ -1,0 +1,301 @@
+/* 
+
+   Main container for the product cards
+.catapi {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow-x: scroll;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    scroll-snap-align: start;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #49A6A2;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 3px;
+}
+
+.product-tumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    height: 150px;
+}
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.product-detail {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-name {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-btn button {
+    background-color: #49A6A2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.product-btn button:hover {
+    background-color: #388f8a;
+}
+
+/* Responsive Styles */
+/* @media (max-width: 768px) {
+    .catapi {
+        gap: 10px;
+    }
+    
+    .product-card {
+        width: 150px;
+    }
+    
+    .product-tumb {
+        height: 120px;
+    }
+    
+    .product-name {
+        font-size: 14px;
+    }
+    
+    .product-price {
+        font-size: 12px;
+    }
+    
+    .product-btn button {
+        font-size: 12px;
+    }
+}  */ 
+
+/* Main container for the product cards */
+.catapi {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Each product card styling */
+.product-card {
+    flex: 0 0 auto;
+    width: 250px; /* Default width for larger screens */
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    scroll-snap-align: start;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Discount badge styling */
+.badge {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #49A6A2;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 3px;
+}
+
+/* Product image container */
+.product-tumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    height: 180px; /* Adjusted for better fit */
+}
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Product details section */
+.product-detail {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-name {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Add to Cart button styling */
+.product-btn button {
+    background-color: #49A6A2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.product-btn button:hover {
+    background-color: #388f8a;
+}
+
+/* Responsive Styles */
+
+/* For tablets and medium devices */
+@media (max-width: 1024px) {
+    .product-card {
+        width: 220px; /* Reduce width for medium devices */
+    }
+    
+    .product-tumb {
+        height: 150px; /* Adjust image container height */
+    }
+    
+    .product-name {
+        font-size: 16px;
+    }
+    
+    .product-price {
+        font-size: 14px;
+    }
+    
+    .product-btn button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .catapi {
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .product-card {
+        width: 180px; /* Narrower cards on mobile */
+    }
+    
+    .product-tumb {
+        height: 120px;
+    }
+    
+    .product-name {
+        font-size: 14px;
+    }
+    
+    .product-price {
+        font-size: 12px;
+    }
+    
+    .product-btn button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* For extra-small mobile devices */
+@media (max-width: 480px) {
+    .catapi {
+        gap: 10px;
+    }
+    
+    .product-card {
+        width: 150px; /* Even narrower for very small screens */
+    }
+    
+    .product-tumb {
+        height: 100px;
+    }
+    
+    .product-name {
+        font-size: 12px;
+    }
+    
+    .product-price {
+        font-size: 10px;
+    }
+    
+    .product-btn button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+}
+
