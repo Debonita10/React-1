@@ -1,0 +1,37 @@
+.beauty-item {
+    padding: 20px;
+    text-align: center;
+}
+  
+  .beauty-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+  
+  
+  img.beauty-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #4cb5a3;
+}
+  
+  .beauty-item p {
+    font-size: 21px;
+    font-family: sans-serif;
+}
+  .seg {
+    text-align: end;
+}
+  .seg button {
+    border: transparent;
+    background-color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+  /* button.clothing {
+    padding: 5px;
+  } */
